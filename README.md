@@ -2,6 +2,8 @@
 
 A modern, AI-powered solutions architect platform featuring real-time security monitoring, compliance tracking, and intelligent technical advisory powered by Google's Gemini AI.
 
+![Solutions Architect AI Interface](docs/screenshot.png)
+
 ## 🚀 Features
 
 - **AI Solutions Architect** - Gemini-powered chatbot providing expert advice on Kubernetes, container platforms, and DevSecOps best practices

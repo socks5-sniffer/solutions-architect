@@ -1,4 +1,4 @@
-# Enterprise DevSecOps Platform
+# AI Solutions Architect
 
 A modern, AI-powered solutions architect platform featuring intelligent technical advisory powered by Google's Gemini AI.
 

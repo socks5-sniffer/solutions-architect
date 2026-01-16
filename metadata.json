@@ -1,5 +1,5 @@
 {
-  "name": "Red Hat DevSecOps Showcase",
-  "description": "An enterprise-grade portfolio application demonstrating web development and cybersecurity expertise, featuring a Red Hat-inspired design system, real-time security simulations, and an integrated Gemini-powered technical advisor.",
+  "name": "Enterprise DevSecOps Platform",
+  "description": "An enterprise-grade portfolio application demonstrating web development and cybersecurity expertise, featuring a modern design system, real-time security simulations, and an integrated Gemini-powered technical advisor.",
   "requestFramePermissions": []
 }

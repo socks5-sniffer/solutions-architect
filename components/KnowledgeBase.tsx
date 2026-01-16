@@ -50,7 +50,7 @@ const KnowledgeBase: React.FC = () => {
           <input 
             type="text"
             placeholder="Search knowledge base (e.g., 'OpenShift', 'NIST')..."
-            className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded focus:ring-rh-red focus:border-rh-red outline-none"
+            className="w-full pl-10 pr-4 py-2 bg-gray-50 border border-gray-300 rounded focus:ring-primary focus:border-primary outline-none"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -70,10 +70,10 @@ const KnowledgeBase: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {filtered.map(entry => (
-          <article key={entry.id} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:border-rh-red transition-all group">
+          <article key={entry.id} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:border-primary transition-all group">
             <div className="flex justify-between items-start mb-3">
-              <h3 className="text-xl font-black text-gray-900 group-hover:text-rh-red transition-colors">{entry.title}</h3>
-              <ExternalLink size={16} className="text-gray-300 group-hover:text-rh-red" />
+              <h3 className="text-xl font-black text-gray-900 group-hover:text-primary transition-colors">{entry.title}</h3>
+              <ExternalLink size={16} className="text-gray-300 group-hover:text-primary" />
             </div>
             <p className="text-gray-600 text-sm mb-4">{entry.summary}</p>
             <div className="flex flex-wrap gap-2">
@@ -90,7 +90,7 @@ const KnowledgeBase: React.FC = () => {
       {filtered.length === 0 && (
         <div className="text-center py-20 bg-white rounded-lg border-2 border-dashed border-gray-200">
           <p className="text-gray-500">No entries found matching "{searchTerm}"</p>
-          <button onClick={() => setSearchTerm('')} className="mt-2 text-rh-red font-bold underline">Clear filters</button>
+          <button onClick={() => setSearchTerm('')} className="mt-2 text-primary font-bold underline">Clear filters</button>
         </div>
       )}
     </div>

@@ -12,22 +12,22 @@ const ComplianceVault: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="bg-gradient-to-r from-rh-charcoal to-[#2a2d30] p-8 rounded-xl text-white shadow-xl relative overflow-hidden">
+      <div className="bg-gradient-to-r from-dark to-[#2a2d30] p-8 rounded-xl text-white shadow-xl relative overflow-hidden">
         <div className="relative z-10 max-w-2xl">
           <h1 className="text-3xl font-black mb-4">Enterprise Compliance & Regulatory Vault</h1>
           <p className="text-gray-300 text-lg mb-6">
             Ensuring all deployed microservices adhere to global security protocols and zero-trust architecture.
           </p>
           <div className="flex gap-4">
-            <button className="px-6 py-2 bg-white text-rh-charcoal font-bold rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
+            <button className="px-6 py-2 bg-white text-dark font-bold rounded hover:bg-gray-100 transition-colors flex items-center gap-2">
               <FileText size={18} /> Download Audit Reports
             </button>
-            <button className="px-6 py-2 border border-gray-500 text-white font-bold rounded hover:bg-white hover:text-rh-charcoal transition-all">
+            <button className="px-6 py-2 border border-gray-500 text-white font-bold rounded hover:bg-white hover:text-dark transition-all">
               Schedule Review
             </button>
           </div>
         </div>
-        <Lock className="absolute right-[-20px] top-[-20px] text-rh-red opacity-10" size={300} />
+        <Lock className="absolute right-[-20px] top-[-20px] text-primary opacity-10" size={300} />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -43,7 +43,7 @@ const ComplianceVault: React.FC = () => {
                   <p className="text-xs text-gray-500 uppercase font-bold tracking-widest">{item.status}</p>
                 </div>
               </div>
-              <span className="text-2xl font-black text-rh-charcoal">{item.score}%</span>
+              <span className="text-2xl font-black text-dark">{item.score}%</span>
             </div>
             
             <div className="w-full bg-gray-100 h-2 rounded-full mb-6">

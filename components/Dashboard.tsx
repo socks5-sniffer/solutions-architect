@@ -72,7 +72,7 @@ const Dashboard: React.FC = () => {
           label="Active Deployments" 
           value="24" 
           trend="+4" 
-          color="bg-rh-red" 
+          color="bg-primary" 
         />
       </div>
 
@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
         <div className="lg:col-span-2 bg-white p-6 rounded-lg shadow-sm border border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-lg font-bold text-gray-800">Cluster Performance Metrics</h3>
-            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg p-1.5 focus:ring-rh-red focus:border-rh-red">
+            <select className="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg p-1.5 focus:ring-primary focus:border-primary">
               <option>Last 24 Hours</option>
               <option>Last 7 Days</option>
             </select>
@@ -122,10 +122,10 @@ const Dashboard: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-rh-charcoal p-6 rounded-lg shadow-lg text-white">
+          <div className="bg-dark p-6 rounded-lg shadow-lg text-white">
             <h3 className="text-md font-bold mb-3 flex items-center gap-2">
-              <ShieldCheck className="text-rh-red" size={18} />
-              OpenShift Security Health
+              <ShieldCheck className="text-primary" size={18} />
+              Platform Security Health
             </h3>
             <div className="space-y-4">
               <div>

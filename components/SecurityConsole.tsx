@@ -38,7 +38,7 @@ const SecurityConsole: React.FC = () => {
           <button 
             onClick={runScan}
             disabled={isScanning}
-            className={`flex items-center gap-2 px-4 py-2 bg-rh-red text-white font-bold rounded shadow-md hover:bg-red-700 transition-colors ${isScanning && 'opacity-70 cursor-not-allowed'}`}
+            className={`flex items-center gap-2 px-4 py-2 bg-primary text-white font-bold rounded shadow-md hover:bg-red-700 transition-colors ${isScanning && 'opacity-70 cursor-not-allowed'}`}
           >
             {isScanning ? <RefreshCw className="animate-spin" size={18} /> : <ShieldAlert size={18} />}
             {isScanning ? 'Scanning Cluster...' : 'Initiate Security Scan'}
@@ -55,23 +55,23 @@ const SecurityConsole: React.FC = () => {
             </h3>
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm text-gray-600">
-                <input type="checkbox" className="rounded border-gray-300 text-rh-red focus:ring-rh-red" defaultChecked />
+                <input type="checkbox" className="rounded border-gray-300 text-primary focus:ring-primary" defaultChecked />
                 Critical Events
               </label>
               <label className="flex items-center gap-2 text-sm text-gray-600">
-                <input type="checkbox" className="rounded border-gray-300 text-rh-red focus:ring-rh-red" defaultChecked />
+                <input type="checkbox" className="rounded border-gray-300 text-primary focus:ring-primary" defaultChecked />
                 Warnings
               </label>
               <label className="flex items-center gap-2 text-sm text-gray-600">
-                <input type="checkbox" className="rounded border-gray-300 text-rh-red focus:ring-rh-red" />
+                <input type="checkbox" className="rounded border-gray-300 text-primary focus:ring-primary" />
                 Info Logs
               </label>
             </div>
           </div>
 
-          <div className="bg-rh-charcoal p-4 rounded text-white shadow-lg">
+          <div className="bg-dark p-4 rounded text-white shadow-lg">
             <h3 className="font-bold mb-3">Threat Exposure</h3>
-            <div className="text-3xl font-black text-rh-red mb-1">Low</div>
+            <div className="text-3xl font-black text-primary mb-1">Low</div>
             <p className="text-xs text-gray-400">Last updated: 2 mins ago</p>
           </div>
         </div>
@@ -87,7 +87,7 @@ const SecurityConsole: React.FC = () => {
               {events.map((event) => (
                 <div key={event.id} className="p-4 hover:bg-gray-50 transition-colors flex gap-4">
                   <div className={`shrink-0 w-2 h-2 rounded-full mt-2 ${
-                    event.level === 'critical' ? 'bg-rh-red' : 
+                    event.level === 'critical' ? 'bg-primary' : 
                     event.level === 'warning' ? 'bg-orange-500' : 'bg-blue-500'
                   }`} />
                   <div className="flex-1">

@@ -10,8 +10,8 @@ const App: React.FC = () => {
       <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shadow-sm shrink-0">
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-rh-red rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">R</span>
+            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-sm">P</span>
             </div>
             <h1 className="text-xl font-bold text-gray-800">Platform One Architect</h1>
           </div>
@@ -21,16 +21,16 @@ const App: React.FC = () => {
         </div>
         
         <div className="flex items-center gap-6">
-          <button className="text-gray-500 hover:text-rh-red relative">
+          <button className="text-gray-500 hover:text-primary relative">
             <Bell size={20} />
-            <span className="absolute -top-1 -right-1 w-2 h-2 bg-rh-red rounded-full"></span>
+            <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
           </button>
           <div className="flex items-center gap-3 border-l pl-6 border-gray-200">
             <div className="text-right hidden sm:block">
               <p className="text-sm font-bold text-gray-800 leading-none">Security Admin</p>
               <p className="text-xs text-gray-500">Identity: Root-lvl-1</p>
             </div>
-            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-2 border-rh-red p-0.5">
+            <div className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border-2 border-primary p-0.5">
               <img src="https://picsum.photos/40/40" alt="Avatar" className="rounded-full w-full h-full object-cover" />
             </div>
           </div>
@@ -46,7 +46,7 @@ const App: React.FC = () => {
       
       {/* Footer */}
       <footer className="py-2 px-6 bg-white border-t border-gray-200 text-center text-[10px] text-gray-400 font-medium">
-        &copy; 2024 Red Hat Styled Solutions Architect Terminal. Confidential & Proprietary.
+        &copy; 2024 Enterprise Solutions Platform. Confidential & Proprietary.
       </footer>
     </div>
   );

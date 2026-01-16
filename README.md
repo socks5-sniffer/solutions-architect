@@ -5,9 +5,7 @@ A modern, AI-powered solutions architect platform featuring real-time security m
 ## 🚀 Features
 
 - **AI Solutions Architect** - Gemini-powered chatbot providing expert advice on Kubernetes, container platforms, and DevSecOps best practices
-- **Security Command Center** - Real-time monitoring of cluster-wide security events and threat exposure
-- **Dashboard Analytics** - Performance metrics visualization with interactive charts for CPU, memory, and network usage
-- **Compliance Vault** - Enterprise regulatory compliance tracking (SOC 2, HIPAA, NIST 800-53, PCI DSS)
+
 - **Knowledge Base** - Searchable technical documentation and best practices library
 
 ## 🛠️ Tech Stack

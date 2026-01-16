@@ -1,8 +1,10 @@
-# Enterprise DevSecOps Platform
+# AI Solutions Architect
 
-A modern, AI-powered solutions architect platform featuring real-time security monitoring, compliance tracking, and intelligent technical advisory powered by Google's Gemini AI.
+A modern, AI-powered solutions architect platform featuring intelligent technical advisory powered by Google's Gemini AI.
 
-![Solutions Architect AI Interface](docs/screenshot.png)
+<img width="1366" height="648" alt="{1D878843-2D1F-4A5A-A94F-B8FDE2687DF9}" src="https://github.com/user-attachments/assets/8e07f0e5-7782-4b22-aa79-4eba164bf38c" />
+
+
 
 ## 🚀 Features
 

@@ -1,14 +1,33 @@
 
 import { GoogleGenAI } from "@google/genai";
+import { InputValidator } from "./inputValidator";
 
 // Correct initialization using direct process.env.API_KEY without fallback
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 export const getTechnicalAdvice = async (query: string) => {
   try {
+    if (!process.env.API_KEY) {
+      return "Configuration error: API key is missing. Please check your .env.local file.";
+    }
+    
+    // Validate and sanitize input
+    const validationResult = InputValidator.validate(query);
+    
+    if (!validationResult.isValid) {
+      console.error('Input validation failed:', validationResult.error);
+      return `Input validation error: ${validationResult.error}`;
+    }
+
+    // Use sanitized input for API call
+    const sanitizedQuery = validationResult.sanitizedInput;
+    
+    // Additional security: Log request for audit trail (remove in production or send to secure logging)
+    console.info('Processing query with length:', sanitizedQuery.length);
+    
     const response = await ai.models.generateContent({
       model: "gemini-3-pro-preview",
-      contents: query,
+      contents: sanitizedQuery,
       config: {
         systemInstruction: `You are a Senior Cloud Solutions Architect and DevSecOps Engineer. 
         Your goal is to provide technical advice on Kubernetes, container platforms, Linux security, and web development.
@@ -50,11 +69,42 @@ export const getTechnicalAdvice = async (query: string) => {
            - Always mention "Day 2 Operations" (logging, monitoring) when proposing an architecture
            - Break complex topics into digestible chunks`,
         temperature: 0.7,
+        // Additional safety settings
+        safetySettings: [
+          {
+            category: 'HARM_CATEGORY_HARASSMENT',
+            threshold: 'BLOCK_MEDIUM_AND_ABOVE'
+          },
+          {
+            category: 'HARM_CATEGORY_HATE_SPEECH',
+            threshold: 'BLOCK_MEDIUM_AND_ABOVE'
+          },
+          {
+            category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
+            threshold: 'BLOCK_MEDIUM_AND_ABOVE'
+          },
+          {
+            category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
+            threshold: 'BLOCK_MEDIUM_AND_ABOVE'
+          }
+        ]
       },
     });
+    
+    // Validate response before returning
+    if (!response || !response.text) {
+      return "Error: Invalid response from AI service.";
+    }
+    
     return response.text;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gemini API Error:", error);
-    return "I am currently processing high traffic in the cluster. Please try again shortly.";
+    console.error("Error details:", error.message, error.response?.data);
+    
+    // Return more specific error message
+    if (error.message?.includes("API key")) {
+      return "API Key error: Please check that your Gemini API key is valid and active.";
+    }
+    return `Error: ${error.message || "I am currently processing high traffic in the cluster. Please try again shortly."}`;
   }
 };

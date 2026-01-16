@@ -2,7 +2,8 @@
 
 A modern, AI-powered solutions architect platform featuring intelligent technical advisory powered by Google's Gemini AI.
 
-<img width="1360" height="638" alt="{E940CBC7-93B7-482B-9D76-65EA9B75D40B}" src="https://github.com/user-attachments/assets/17197ab6-7fde-41f5-b0e5-f91ce3b9589b" />
+<img width="1366" height="648" alt="{1D878843-2D1F-4A5A-A94F-B8FDE2687DF9}" src="https://github.com/user-attachments/assets/8e07f0e5-7782-4b22-aa79-4eba164bf38c" />
+
 
 
 ## 🚀 Features

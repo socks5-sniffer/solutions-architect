@@ -120,3 +120,4 @@ Contributions welcome! Please open an issue or submit a pull request.
 ---
 
 **Note:** This project was originally created with Google AI Studio and converted to a standard Vite + React setup for local development.
+It was refactored and then deployed to OpenShift.
